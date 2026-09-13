@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.0
+
+- **The skill now activates at the moments its newer rules are about to be broken.** The description had not changed since 0.1.0 and only listed "about to report completion", so the two rules that matter most — do not shape the check to fit the result, and evidence goes stale — could never fire at the moment they apply: a check that just failed, or a screenshot from earlier in the session about to be cited. Both are now trigger conditions. A rule that does not activate is not a rule.
+
 ## 0.7.0
 
 - **The ledger must cover the whole request, not just the parts that got done.** Nothing previously required a row for work that was never started, so a five-part request finished twice over could be reported as two DONE rows and look flawless. Rows now come from what was asked for; anything skipped or deliberately dropped gets a row saying so, because silence is not a verdict.

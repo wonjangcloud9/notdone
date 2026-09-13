@@ -1,6 +1,6 @@
 ---
 name: notdone
-description: Blocks completion claims that have no evidence. Use whenever you are about to report that a task, fix, feature, or deployment is finished, when you are about to write "done" / "fixed" / "should work", or when the user asks whether something is complete. Converts the claim into an evidence ledger and forces a NOT DONE verdict when proof is missing.
+description: Blocks completion claims that have no evidence, and blocks evidence that was shaped to fit. Use whenever you are about to report that a task, fix, feature or deployment is finished; whenever you are about to write "done" / "fixed" / "should work"; when a check you ran has just failed and you are considering editing it, narrowing it, or re-running it until it passes; when you are about to cite a screenshot or test run from earlier in the session; and when the user asks whether something is complete. Converts the claim into an evidence ledger covering the whole request, and forces a NOT DONE verdict when proof is missing.
 license: MIT
 ---
 
