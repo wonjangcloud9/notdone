@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.0
+
+- **Manufactured evidence is now forbidden explicitly.** Until this release the rules could be satisfied perfectly while engineering the result: edit the assertion until it goes green, narrow the run to the passing subset, screenshot only the viewport that looks right, re-run a flake and cite the good run. Each produces a real artifact, so the ledger looks identical to an honest one — which makes it worse than an unverified claim, not better. A failing check is a finding; if the check itself was wrong, fixing it is its own change and has to be said.
+
 ## 0.5.0
 
 - **Evidence now has to postdate the last change it speaks for.** The rule said an artifact is something observed after the change, which left the common case open: take the screenshot, edit twice more, cite the screenshot. It describes a version that no longer exists. Re-run the check, or mark the row NOT DONE.

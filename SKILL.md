@@ -58,6 +58,21 @@ The ledger is the last step, not the first. Before writing it, go and produce th
 
 If a check is quick, do it rather than declaring it undone. The bar for writing NOT DONE is that verifying would need something you do not have: a credential, a device, a service, or the user's decision.
 
+## Do not shape the check to fit the result
+
+A failing check is a finding. Report it.
+
+The ways evidence gets manufactured all look like progress at the time:
+
+- editing the assertion, the fixture or the expected value until the output turns green,
+- narrowing the run to the subset that passes and pasting that,
+- screenshotting the viewport that looks right and skipping the one that does not,
+- re-running a flaky check until it goes green and citing that run rather than the flake.
+
+Each produces a real artifact, so the ledger looks identical to an honest one. That is exactly what makes it worse than an unverified claim — it is a false claim wearing proof.
+
+If the check fails, the honest ledger row says so, and the work is not finished. If the check was wrong, fix the check as its own change and say that you did, rather than folding it into the result.
+
 ## The ledger
 
 End any message that reports completion with this table. No table, no completion.

@@ -93,6 +93,12 @@ Sometimes it genuinely can't check — no browser, no credentials, a paid third-
 
 It never lets an unverifiable claim wear the word "done".
 
+## Manufactured evidence is the worse failure
+
+A failing check is a finding, not an obstacle. The skill forbids the moves that turn a red result green without fixing anything: editing the assertion until it passes, narrowing the run to the subset that works, screenshotting only the viewport that looks right, re-running a flake until it goes green and citing that run.
+
+Every one of those produces a real artifact, so the ledger looks exactly like an honest one. That is what makes it worse than a claim with no evidence at all — you would at least have known to check that one.
+
 ## NOT DONE is not a shortcut
 
 The ledger is the last step, not the first. The skill tells the agent to go and produce the artifacts — run the test, take the screenshot, request the URL — before writing the report. **NOT DONE** is reserved for what it attempted and could not finish, or what needs something it does not have: a credential, a device, a service, your decision.

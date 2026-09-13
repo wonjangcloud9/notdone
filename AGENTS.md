@@ -24,6 +24,12 @@ The ledger is the last step, not the first. Run the test, take the screenshot, r
 
 NOT DONE is for what you attempted and could not complete, or what needs something you do not have — a credential, a device, a service, the user's decision. It is not a way to skip a check you could have run.
 
+## Do not shape the check to fit the result
+
+A failing check is a finding — report it. Do not edit the assertion until it goes green, narrow the run to the passing subset, screenshot only the viewport that looks right, or re-run a flake until it passes and cite that run.
+
+Each produces a real artifact, so the ledger looks honest. That makes it worse than an unverified claim, not better. If the check itself was wrong, fix it as its own change and say so.
+
 ## End completion reports with a ledger
 
 | Claim | Evidence | Verdict |
