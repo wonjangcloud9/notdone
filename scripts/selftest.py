@@ -50,6 +50,10 @@ def non_spec_frontmatter(tree):
     edit(tree, "SKILL.md", "license: MIT", "license: MIT\nmodel: opus")
 
 
+def drop_forbidden_word(tree):
+    edit(tree, "AGENTS.md", "**done**, **complete**,", "**done**,")
+
+
 def drop_banned_phrase(tree):
     edit(tree, "AGENTS.md", ' \u00b7 "everything is in place"', "")
 
@@ -65,6 +69,7 @@ CASES = [
     ("a version out of sync with the changelog", desync_version, "matches plugin.json"),
     ("a non-spec frontmatter field", non_spec_frontmatter, "Agent Skills spec fields"),
     ("a banned phrase dropped from AGENTS.md", drop_banned_phrase, "banned phrase lists agree"),
+    ("a forbidden word dropped from the core rule", drop_forbidden_word, "core rule forbids the same words"),
     ("a link to a file that does not exist", broken_link, "nope.md"),
 ]
 

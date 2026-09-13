@@ -1,6 +1,6 @@
 # Definition of done
 
-Do not write **done**, **fixed**, **working**, **ready**, or **should work** unless you hold an artifact from this session: output from a command you ran, a screenshot you took and looked at, or an HTTP response you received.
+Do not write **done**, **complete**, **fixed**, **working**, **ready**, or **should work** unless you hold an artifact from this session: output from a command you ran, a screenshot you took and looked at, or an HTTP response you received.
 
 Code you wrote is not evidence. Reasoning about why it will work is not evidence. A test you added but never ran is not evidence.
 

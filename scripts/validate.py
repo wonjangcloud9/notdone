@@ -64,6 +64,18 @@ def banned_phrases(path, heading):
     return phrases
 
 
+def forbidden_words(path):
+    """The bolded words in the core rule sentence, as a set.
+
+    The most important sentence in both documents, and the one most likely to
+    be edited in only one of them.
+    """
+    for line in path.read_text().splitlines():
+        if "unless you hold an artifact" in line:
+            return set(re.findall(r"\*\*([^*]+)\*\*", line))
+    return set()
+
+
 failures = []
 checks = 0
 
@@ -163,6 +175,13 @@ check("evidence tables agree", skill_rows == agents_rows,
 skill_phrases = banned_phrases(ROOT / "SKILL.md", "## Phrases that are never acceptable")
 agents_phrases = banned_phrases(ROOT / "AGENTS.md", "## Never use these phrases")
 missing = (skill_phrases | agents_phrases) - (skill_phrases & agents_phrases)
+skill_words = forbidden_words(ROOT / "SKILL.md")
+agents_words = forbidden_words(ROOT / "AGENTS.md")
+word_gap = (skill_words | agents_words) - (skill_words & agents_words)
+check("the core rule forbids the same words", skill_words and not word_gap,
+      f"only in one file: {', '.join(sorted(word_gap))}" if word_gap
+      else f"{len(skill_words)} words identical")
+
 check("banned phrase lists agree", skill_phrases and not missing,
       f"only in one file: {', '.join(sorted(missing))}" if missing
       else f"{len(skill_phrases)} phrases identical")

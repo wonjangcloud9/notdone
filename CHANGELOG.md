@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.3
+
+- The core rule sentence forbade six words in `SKILL.md` and five in `AGENTS.md` — "complete" was missing from the copy other agents read. Restored, and `validate.py` now compares that sentence's word list too. This is the third instance of the same drift, each in a different duplicated passage.
+
 ## 0.4.2
 
 - `AGENTS.md` was missing one banned phrase — "everything is in place" — so anyone using the Codex/Cursor copy was not covered by it. Restored, and `validate.py` now compares the two phrase lists the same way it compares the evidence tables. The check found this drift on its first run, as the table check did before it.
