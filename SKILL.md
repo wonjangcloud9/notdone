@@ -80,5 +80,6 @@ Do not pad the ledger with trivially true rows to make it look complete.
 ## Additional resources
 
 - [checklists/ui.md](checklists/ui.md) — what to actually look for in each screenshot
+- [checklists/logic.md](checklists/logic.md) — why "tests pass" is not test output
 - [checklists/data.md](checklists/data.md) — migrations, backfills, RLS
 - [checklists/deploy.md](checklists/deploy.md) — proving a deploy is live
