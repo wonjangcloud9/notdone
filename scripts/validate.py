@@ -92,7 +92,7 @@ lines = len(text.splitlines())
 check("SKILL.md under 500 lines", lines <= 500, f"{lines} lines")
 
 print("\nReferenced files")
-for source in ["SKILL.md", "README.md", "README.ko.md"]:
+for source in ["SKILL.md", "README.md", "README.ko.md", "CHANGELOG.md"]:
     body = (ROOT / source).read_text()
     for ref in re.findall(r"\]\((?!https?:)([^)#]+)\)", body):
         target = ROOT / ref
@@ -107,6 +107,13 @@ check("plugin name matches the skill", plugin.get("name") == (fm or {}).get("nam
 check("marketplace lists the plugin",
       any(p.get("name") == plugin.get("name") for p in market.get("plugins", [])))
 check("marketplace owner declared", "name" in market.get("owner", {}))
+
+changelog = (ROOT / "CHANGELOG.md").read_text()
+headings = re.findall(r"^## \[?(\d+\.\d+\.\d+)\]?", changelog, re.M)
+check("CHANGELOG has a version heading", bool(headings))
+check("CHANGELOG top entry matches plugin.json", bool(headings) and headings[0] == plugin.get("version"),
+      f"changelog {headings[0] if headings else '-'} vs plugin.json {plugin.get('version')}; "
+      "the skill's rules ship inside the plugin, so a changed rule needs a changed version")
 
 print("\nDoc invariants")
 linked = (ROOT / "SKILL.md").read_text()
