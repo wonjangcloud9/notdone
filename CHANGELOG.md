@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.2
+
+- 0.7.0's rule — the ledger covers what was asked for, not what got done — reached `SKILL.md` and `AGENTS.md` but never the READMEs, so the pitch was missing the behaviour that stops a five-part request being reported as two tidy DONE rows. Folded into the opening example rather than added as a twelfth section.
+
 ## 0.8.1
 
 - The README never said how to update a cloned install, and implied only the plugin route could be updated. It is `git -C ~/.claude/skills/notdone pull`. With eight releases in a day, anyone who cloned early was sitting on a materially weaker skill with no way to know.

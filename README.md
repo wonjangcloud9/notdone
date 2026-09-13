@@ -31,7 +31,7 @@ With `notdone`, the same turn ends like this:
 >
 > **NOT DONE.** I have not rendered the page with zero saved profiles, and I have not checked it at 400px.
 
-Two rows of work, honestly labeled, beat four rows of confidence. [A fuller before/after](examples/session.md) shows a turn where the honest version catches a bug the confident one ships.
+Two rows of work, honestly labeled, beat four rows of confidence. Note that the unfinished rows are still *there*: the table covers what you asked for, not what the agent got around to, so four parts requested and two delivered is four rows — never a tidy report of the two. [A fuller before/after](examples/session.md) shows a turn where the honest version catches a bug the confident one ships.
 
 ## Install
 
