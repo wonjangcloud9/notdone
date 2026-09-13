@@ -92,3 +92,4 @@ If the user waives verification — "just push it", "don't bother checking" — 
 - [checklists/bugfix.md](checklists/bugfix.md) — why a repro that never failed proves nothing
 - [checklists/data.md](checklists/data.md) — migrations, backfills, RLS
 - [checklists/deploy.md](checklists/deploy.md) — proving a deploy is live
+- [checklists/dependency.md](checklists/dependency.md) — why a warm process proves nothing
