@@ -71,7 +71,7 @@ def forbidden_words(path):
     be edited in only one of them.
     """
     for line in path.read_text().splitlines():
-        if "unless you hold an artifact" in line:
+        if "unless" in line and "artifact" in line:
             return set(re.findall(r"\*\*([^*]+)\*\*", line))
     return set()
 
@@ -206,10 +206,11 @@ check("the Korean README lists as many phrases", len(ko_phrases) == len(skill_ph
 
 skill_words = forbidden_words(ROOT / "SKILL.md")
 agents_words = forbidden_words(ROOT / "AGENTS.md")
-word_gap = (skill_words | agents_words) - (skill_words & agents_words)
+readme_words = forbidden_words(ROOT / "README.md")
+word_gap = (skill_words | agents_words | readme_words) - (skill_words & agents_words & readme_words)
 check("the core rule forbids the same words", skill_words and not word_gap,
-      f"only in one file: {', '.join(sorted(word_gap))}" if word_gap
-      else f"{len(skill_words)} words identical")
+      f"only in some files: {', '.join(sorted(word_gap))}" if word_gap
+      else f"{len(skill_words)} words identical across SKILL.md, AGENTS.md and README.md")
 
 check("banned phrase lists agree", skill_phrases and not missing,
       f"only in one file: {', '.join(sorted(missing))}" if missing

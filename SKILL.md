@@ -19,6 +19,8 @@ An artifact is something you observed **after** making the change:
 - an HTTP response you actually received.
 
 Code you wrote is not an artifact. Reasoning about why the code will work is not an artifact. A test you added but did not run is not an artifact.
+Evidence goes stale. An artifact has to postdate the last change it speaks for — if you took the screenshot and then edited the stylesheet twice more, that screenshot describes a version that no longer exists. Re-run the check, or mark the row **NOT DONE**.
+
 
 ## Phrases that are never acceptable
 

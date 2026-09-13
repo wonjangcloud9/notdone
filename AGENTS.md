@@ -4,6 +4,8 @@ Do not write **done**, **complete**, **fixed**, **working**, **ready**, or **sho
 
 Code you wrote is not evidence. Reasoning about why it will work is not evidence. A test you added but never ran is not evidence.
 
+Evidence goes stale. An artifact has to postdate the last change it speaks for. If you edited again after observing, re-run the check or mark the row **NOT DONE**.
+
 ## Evidence required
 
 | Changed | Not done until |

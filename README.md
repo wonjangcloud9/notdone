@@ -54,13 +54,15 @@ It activates on its own when the agent is about to report completion. You can al
 
 ## The rule
 
-The agent may not write **done**, **fixed**, **working**, **ready**, or **should work** unless it holds an artifact from the current session:
+The agent may not write **done**, **complete**, **fixed**, **working**, **ready**, or **should work** unless it holds an artifact from the current session:
 
 - output from a command it actually ran,
 - a screenshot it actually took and looked at,
 - an HTTP response it actually received.
 
 Code it wrote is not evidence. Reasoning about why the code will work is not evidence. A test it added but never ran is not evidence.
+
+Evidence also goes stale. A screenshot taken before two more edits describes a version that no longer exists, so the artifact has to postdate the last change it speaks for.
 
 ## What counts as evidence
 

@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.0
+
+- **Evidence now has to postdate the last change it speaks for.** The rule said an artifact is something observed after the change, which left the common case open: take the screenshot, edit twice more, cite the screenshot. It describes a version that no longer exists. Re-run the check, or mark the row NOT DONE.
+- The README's copy of the core rule was still missing "complete" — the word check only compared `SKILL.md` and `AGENTS.md`. It now covers all three.
+
 ## 0.4.5
 
 - Both READMEs listed five banned phrases where the skill forbids seven; "presumably this resolves..." and "everything is in place" were missing. Added, and `validate.py` now compares the lists, normalising for the sentence case the README deliberately uses. The Korean README is checked on count.
