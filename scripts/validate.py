@@ -17,6 +17,29 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 # extension and causes a hard error when the skill is uploaded to claude.ai.
 SPEC_FIELDS = {"name", "description", "license", "compatibility", "metadata", "allowed-tools"}
 
+def evidence_table(path):
+    """The rows of the 'Changed | Not done until' table, wherever it appears.
+
+    SKILL.md and AGENTS.md both carry this table — the skill for Claude Code,
+    AGENTS.md for anything else. Duplication is deliberate (AGENTS.md has to
+    survive being copied into a repo alone) so the rows have to be kept equal
+    by something other than memory.
+    """
+    rows, inside = [], False
+    for line in path.read_text().splitlines():
+        stripped = line.strip()
+        if stripped.startswith("| Changed ") and "Not done until" in stripped:
+            inside = True
+            continue
+        if inside:
+            if not stripped.startswith("|"):
+                break
+            if set(stripped) <= set("|- "):
+                continue
+            rows.append(tuple(c.strip() for c in stripped.strip("|").split("|")))
+    return rows
+
+
 failures = []
 checks = 0
 
@@ -84,6 +107,27 @@ check("plugin name matches the skill", plugin.get("name") == (fm or {}).get("nam
 check("marketplace lists the plugin",
       any(p.get("name") == plugin.get("name") for p in market.get("plugins", [])))
 check("marketplace owner declared", "name" in market.get("owner", {}))
+
+print("\nDoc invariants")
+linked = (ROOT / "SKILL.md").read_text()
+for path in sorted((ROOT / "checklists").glob("*.md")):
+    rel = f"checklists/{path.name}"
+    check(f"{rel} is reachable from SKILL.md", rel in linked,
+          "a checklist nothing links to is a checklist nobody reads")
+
+agents = (ROOT / "AGENTS.md").read_text()
+relative_links = re.findall(r"\]\((?!https?:)([^)]+)\)", agents)
+check("AGENTS.md has no relative links", not relative_links,
+      f"it gets copied into other repos alone; these would break: {', '.join(relative_links)}"
+      if relative_links else "safe to copy standalone")
+
+skill_rows = evidence_table(ROOT / "SKILL.md")
+agents_rows = evidence_table(ROOT / "AGENTS.md")
+check("evidence table found in both files", bool(skill_rows) and bool(agents_rows),
+      f"SKILL.md {len(skill_rows)} rows, AGENTS.md {len(agents_rows)} rows")
+check("evidence tables agree", skill_rows == agents_rows,
+      "SKILL.md and AGENTS.md have drifted" if skill_rows != agents_rows
+      else f"{len(skill_rows)} rows identical")
 
 print(f"\n{checks - len(failures)}/{checks} checks passed")
 if failures:
