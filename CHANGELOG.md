@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.0
+
+- **The ledger must cover the whole request, not just the parts that got done.** Nothing previously required a row for work that was never started, so a five-part request finished twice over could be reported as two DONE rows and look flawless. Rows now come from what was asked for; anything skipped or deliberately dropped gets a row saying so, because silence is not a verdict.
+
 ## 0.6.0
 
 - **Manufactured evidence is now forbidden explicitly.** Until this release the rules could be satisfied perfectly while engineering the result: edit the assertion until it goes green, narrow the run to the passing subset, screenshot only the viewport that looks right, re-run a flake and cite the good run. Each produces a real artifact, so the ledger looks identical to an honest one — which makes it worse than an unverified claim, not better. A failing check is a finding; if the check itself was wrong, fixing it is its own change and has to be said.

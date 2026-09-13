@@ -38,6 +38,8 @@ Each produces a real artifact, so the ledger looks honest. That makes it worse t
 
 A row with no evidence is **NOT DONE**. Never "probably fine", never quietly dropped.
 
+The rows come from what was asked for, not from what you happened to do. Five parts requested and two finished means five rows, three of them NOT DONE. Anything you decided not to do gets a row saying so — silence is not a verdict.
+
 ## Never use these phrases
 
 "should work now" · "this should fix it" · "the change is straightforward, so..." · "presumably this resolves..." · "I've updated X so it will now Y" · "looks good to me" · "everything is in place"

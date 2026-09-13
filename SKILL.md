@@ -84,6 +84,10 @@ End any message that reports completion with this table. No table, no completion
 | Works on mobile | — | **NOT DONE** |
 
 One row per claim. A row with no evidence is **NOT DONE** — never "probably fine", never quietly dropped.
+The rows come from what was asked for, not from what you happened to do. If the request had five parts and you finished two, the table has five rows and three of them say **NOT DONE**. Reporting only the two is a complete-looking account of 40% of the work, and it is the most common way an honest-looking ledger misleads.
+
+Anything you decided not to do gets a row saying so. Silence is not a verdict.
+
 
 ## When evidence is genuinely impossible
 
