@@ -30,6 +30,12 @@ A row with no evidence is **NOT DONE**. Never "probably fine", never quietly dro
 
 Replace each with the evidence, or with **NOT DONE** and what is missing.
 
+## Proportionality
+
+Evidence is owed when a claim could be wrong in a way that matters. Skip it where there is nothing to observe — a comment, a rename the compiler verifies, a typo the tests already cover. A NOT DONE verdict on a comment is noise, and noise is how a rule gets switched off.
+
+If the user waives verification, comply. Say once what is going unverified, then drop it. Do not repeat it and do not refuse.
+
 ## When verification is impossible
 
 Say so in this shape, and hand over the exact check:

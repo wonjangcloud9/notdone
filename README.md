@@ -91,6 +91,12 @@ Sometimes it genuinely can't check — no browser, no credentials, a paid third-
 
 It never lets an unverifiable claim wear the word "done".
 
+## It knows when not to apply
+
+Not every change owes a ledger. A comment, a rename the compiler verifies, a typo the tests already cover — there is nothing to observe, so demanding evidence is noise, and noise is how a rule gets switched off.
+
+And when you waive it — "just push it" — it complies. It says once what is going unverified, then drops it. It does not repeat the warning, refuse, or quietly verify anyway. The risk is yours to take.
+
 ## Other agents
 
 The same rules work anywhere with a project instruction file. Copy [AGENTS.md](AGENTS.md) to your repository root for Codex, Cursor, and others, or append it to an existing `CLAUDE.md`.

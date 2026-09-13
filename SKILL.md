@@ -77,6 +77,14 @@ Finishing four of five things and saying so beats claiming five and being wrong 
 
 Do not pad the ledger with trivially true rows to make it look complete.
 
+## Proportionality
+
+Not every change owes a ledger. Evidence is owed when a claim could be wrong in a way that matters: behaviour changed, something renders, something ships.
+
+Skip it where there is nothing to observe — a comment, a rename the compiler verifies, a typo in a string the tests already cover. A NOT DONE verdict on a comment is noise, and noise is how a rule gets switched off. Applying this to everything is the fastest way to make it worth nothing.
+
+If the user waives verification — "just push it", "don't bother checking" — comply. Say once, in one line, what is going unverified, and then drop it. Do not repeat the warning, do not refuse, and do not quietly verify anyway. They are allowed to decide that the risk is theirs.
+
 ## Additional resources
 
 - [checklists/ui.md](checklists/ui.md) — what to actually look for in each screenshot
