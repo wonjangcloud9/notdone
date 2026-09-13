@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.3
+
+- `checklists/ui.md` had not been touched since the first release, while eight versions of rules shipped past it. Screenshots are where both of the newer rules land hardest — they are the artifact that goes stale fastest, and the easiest place to keep the three shots that came out well and skip the fourth — and neither was mentioned in the checklist people actually open for UI work.
+
 ## 0.8.2
 
 - 0.7.0's rule — the ledger covers what was asked for, not what got done — reached `SKILL.md` and `AGENTS.md` but never the READMEs, so the pitch was missing the behaviour that stops a five-part request being reported as two tidy DONE rows. Folded into the opening example rather than added as a twelfth section.

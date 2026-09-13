@@ -1,7 +1,7 @@
 {
   "name": "notdone",
   "displayName": "notdone",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "Blocks completion claims that have no evidence, and blocks evidence that was shaped to fit. Turns \"done\" into an evidence ledger and forces NOT DONE when proof is missing.",
   "author": {
     "name": "wonjangcloud9",

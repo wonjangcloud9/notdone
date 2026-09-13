@@ -22,6 +22,12 @@ Not:
 
 > Took screenshots of both themes.
 
+## Shots go stale fastest
+
+Screenshots outlive what they show more easily than any other artifact. Four shots, then one more tweak to the stylesheet, and all four describe a version that no longer exists. If you edit after shooting, shoot again — or say plainly which of the four you have not re-checked.
+
+The matching temptation is to keep the three that look right and quietly not take the fourth. The shot you do not want to take is the one worth taking. A set of screenshots chosen for how they came out is evidence of nothing but the choosing.
+
 ## Also worth a shot, when relevant
 
 - **Long content.** A name that is 60 characters. A number with eight digits. Real data is uglier than fixtures.
