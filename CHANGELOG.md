@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.0
+
+- New checklist: [documentation](checklists/docs.md). Every row of the evidence table now has one. A command in a README is a claim that it works, and the install block is the one command every reader runs and the author never does.
+
 ## 0.2.0
 
 - **Proportionality.** The skill now says when *not* to demand evidence — a comment, a rename the compiler verifies, a typo the tests already cover. A NOT DONE verdict on a comment is noise, and noise is how a rule gets switched off.

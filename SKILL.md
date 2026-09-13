@@ -93,3 +93,4 @@ If the user waives verification — "just push it", "don't bother checking" — 
 - [checklists/data.md](checklists/data.md) — migrations, backfills, RLS
 - [checklists/deploy.md](checklists/deploy.md) — proving a deploy is live
 - [checklists/dependency.md](checklists/dependency.md) — why a warm process proves nothing
+- [checklists/docs.md](checklists/docs.md) — a command you wrote but never ran
