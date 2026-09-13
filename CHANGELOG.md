@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.1
+
+- `scripts/selftest.py` breaks each invariant on purpose — an unlinked checklist, a relative link in `AGENTS.md`, a drifted evidence table, a version out of sync with this file, a non-spec frontmatter field, a dead link — and asserts `validate.py` fails and names the right check. A validator nobody has watched fail might be passing for the wrong reason. No change to the skill's rules.
+
 ## 0.3.0
 
 - New checklist: [documentation](checklists/docs.md). Every row of the evidence table now has one. A command in a README is a claim that it works, and the install block is the one command every reader runs and the author never does.
