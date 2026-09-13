@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.8.4
+
+- The README offered two install paths without saying they collide. Installing both leaves the clone silently unloaded — the plugin takes the name and Claude Code reports it as already taken — so anyone who cloned first and later "upgraded" to the plugin would be running a copy they were not editing. Found by re-running both documented install paths against the current version.
+
 ## 0.8.3
 
 - `checklists/ui.md` had not been touched since the first release, while eight versions of rules shipped past it. Screenshots are where both of the newer rules land hardest — they are the artifact that goes stale fastest, and the easiest place to keep the three shots that came out well and skip the fourth — and neither was mentioned in the checklist people actually open for UI work.

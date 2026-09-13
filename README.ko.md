@@ -50,6 +50,8 @@ claude plugin marketplace add wonjangcloud9/notdone
 claude plugin install notdone@wonjang-skills
 ```
 
+둘 중 하나만 쓰세요. 플러그인과 clone을 같이 깔면 플러그인이 이기고 clone 쪽은 조용히 로드되지 않습니다 — Claude Code가 이름이 이미 쓰이고 있다고 알립니다.
+
 clone으로 깔았다면 갱신은 pull입니다:
 
 ```bash

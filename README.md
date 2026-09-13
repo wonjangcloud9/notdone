@@ -50,6 +50,8 @@ claude plugin marketplace add wonjangcloud9/notdone
 claude plugin install notdone@wonjang-skills
 ```
 
+Pick one of the two, not both. If the plugin and a clone are installed together the plugin wins, and the clone is silently not loaded — Claude Code reports the name as already taken.
+
 To update a cloned install, pull:
 
 ```bash
