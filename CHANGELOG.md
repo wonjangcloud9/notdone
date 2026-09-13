@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.0
+
+- **The skill now tells the agent to go and verify, not only what it may not claim.** Every rule so far governed the report, so a lazy agent could satisfy all of them by doing nothing and writing NOT DONE on every row — and "Reporting NOT DONE is a success" encouraged exactly that. The ledger is now explicitly the last step: produce the artifacts first, and reserve NOT DONE for what you attempted and could not complete, or what needs a credential, a device, a service, or the user's decision.
+
 ## 0.3.1
 
 - `scripts/selftest.py` breaks each invariant on purpose — an unlinked checklist, a relative link in `AGENTS.md`, a drifted evidence table, a version out of sync with this file, a non-spec frontmatter field, a dead link — and asserts `validate.py` fails and names the right check. A validator nobody has watched fail might be passing for the wrong reason. No change to the skill's rules.

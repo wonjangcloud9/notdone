@@ -91,6 +91,12 @@ Sometimes it genuinely can't check — no browser, no credentials, a paid third-
 
 It never lets an unverifiable claim wear the word "done".
 
+## NOT DONE is not a shortcut
+
+The ledger is the last step, not the first. The skill tells the agent to go and produce the artifacts — run the test, take the screenshot, request the URL — before writing the report. **NOT DONE** is reserved for what it attempted and could not finish, or what needs something it does not have: a credential, a device, a service, your decision.
+
+Without that, the rules would be trivially satisfiable by doing nothing and marking every row NOT DONE. An honest report of work you never attempted is not an improvement on a false one.
+
 ## It knows when not to apply
 
 Not every change owes a ledger. A comment, a rename the compiler verifies, a typo the tests already cover — there is nothing to observe, so demanding evidence is noise, and noise is how a rule gets switched off.

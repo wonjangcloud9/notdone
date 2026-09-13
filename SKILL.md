@@ -48,6 +48,14 @@ Replace each one with either the evidence, or the words **NOT DONE** plus what i
 
 If a change spans categories, you owe evidence for each one.
 
+## Get the evidence before you report
+
+The ledger is the last step, not the first. Before writing it, go and produce the artifacts the table above asks for: run the test, take the screenshot, request the URL. Verification is part of the task, not a separate favour you do afterwards.
+
+**NOT DONE** is for what you attempted and could not complete, or what is genuinely out of reach. It is not a way to skip the check. A ledger of honest NOT DONE rows for work you never tried to verify satisfies the letter of this skill and none of its point — you have replaced a false report with a useless one.
+
+If a check is quick, do it rather than declaring it undone. The bar for writing NOT DONE is that verifying would need something you do not have: a credential, a device, a service, or the user's decision.
+
 ## The ledger
 
 End any message that reports completion with this table. No table, no completion.
@@ -76,6 +84,8 @@ Never let an unverifiable claim wear the word "done". Hand the user the exact ch
 Finishing four of five things and saying so beats claiming five and being wrong about one. The user can act on an honest ledger. They cannot act on a confident one that is false.
 
 Do not pad the ledger with trivially true rows to make it look complete.
+
+Nor is it a success when the row could have been DONE for the cost of one command you chose not to run.
 
 ## Proportionality
 

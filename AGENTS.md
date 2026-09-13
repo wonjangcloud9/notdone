@@ -16,6 +16,12 @@ Code you wrote is not evidence. Reasoning about why it will work is not evidence
 | **Dependency / config** | A clean install or boot from scratch, not an already-warm process. |
 | **Docs** | Every command in the doc, executed as written. |
 
+## Get the evidence before you report
+
+The ledger is the last step, not the first. Run the test, take the screenshot, request the URL, then write it.
+
+NOT DONE is for what you attempted and could not complete, or what needs something you do not have — a credential, a device, a service, the user's decision. It is not a way to skip a check you could have run.
+
 ## End completion reports with a ledger
 
 | Claim | Evidence | Verdict |
