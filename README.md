@@ -78,7 +78,7 @@ The [checklists](checklists/) go further — what to actually look for in a dark
 
 ## Phrases it removes
 
-"Should work now." "This should fix it." "The change is straightforward, so..." "I've updated X so it will now Y." "Looks good to me."
+"Should work now." "This should fix it." "The change is straightforward, so..." "Presumably this resolves..." "I've updated X so it will now Y." "Looks good to me." "Everything is in place."
 
 Each of these is a way of saying *I did not check*. The skill replaces them with the evidence, or with **NOT DONE** and the specific thing that is missing.
 

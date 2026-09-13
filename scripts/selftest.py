@@ -50,6 +50,10 @@ def non_spec_frontmatter(tree):
     edit(tree, "SKILL.md", "license: MIT", "license: MIT\nmodel: opus")
 
 
+def drop_readme_phrase(tree):
+    edit(tree, "README.md", ' "Everything is in place."', "")
+
+
 def weaken_readme_table(tree):
     edit(tree, "README.md", " Not the build log.", "")
 
@@ -75,6 +79,7 @@ CASES = [
     ("a banned phrase dropped from AGENTS.md", drop_banned_phrase, "banned phrase lists agree"),
     ("a forbidden word dropped from the core rule", drop_forbidden_word, "core rule forbids the same words"),
     ("the README table promising less than the skill", weaken_readme_table, "README evidence table matches"),
+    ("a banned phrase missing from the README", drop_readme_phrase, "README lists the same banned phrases"),
     ("a link to a file that does not exist", broken_link, "nope.md"),
 ]
 

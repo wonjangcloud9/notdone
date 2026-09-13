@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.5
+
+- Both READMEs listed five banned phrases where the skill forbids seven; "presumably this resolves..." and "everything is in place" were missing. Added, and `validate.py` now compares the lists, normalising for the sentence case the README deliberately uses. The Korean README is checked on count.
+
 ## 0.4.4
 
 - The README carried a fourth copy of the evidence table, left on the pre-0.2.0 wording when `SKILL.md` and `AGENTS.md` were unified. It promised less than the skill delivers — no "Not the build log", no "Pasted, not summarized" — in the document people read first. Synced, and `validate.py` now holds it to the skill's table. The Korean README is a translation, so only its row count is checkable; that is checked too.

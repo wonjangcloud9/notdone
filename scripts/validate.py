@@ -183,9 +183,27 @@ check("evidence tables agree", skill_rows == agents_rows,
       "SKILL.md and AGENTS.md have drifted" if skill_rows != agents_rows
       else f"{len(skill_rows)} rows identical")
 
+def normalise(phrases):
+    """The README writes the phrases as sentences — capitalised, full stop.
+
+    That is deliberate prose styling, so compare on meaning-bearing text only.
+    """
+    return {p.lower().rstrip(".") for p in phrases}
+
+
 skill_phrases = banned_phrases(ROOT / "SKILL.md", "## Phrases that are never acceptable")
 agents_phrases = banned_phrases(ROOT / "AGENTS.md", "## Never use these phrases")
 missing = (skill_phrases | agents_phrases) - (skill_phrases & agents_phrases)
+readme_phrases = banned_phrases(ROOT / "README.md", "## Phrases it removes")
+phrase_gap = normalise(skill_phrases) ^ normalise(readme_phrases)
+check("README lists the same banned phrases", readme_phrases and not phrase_gap,
+      f"only in one file: {', '.join(sorted(phrase_gap))}" if phrase_gap
+      else f"{len(readme_phrases)} phrases, allowing for sentence case")
+
+ko_phrases = banned_phrases(ROOT / "README.ko.md", "## 없어지는 표현들")
+check("the Korean README lists as many phrases", len(ko_phrases) == len(skill_phrases),
+      f"ko {len(ko_phrases)} vs {len(skill_phrases)}; translated, so only the count is checkable")
+
 skill_words = forbidden_words(ROOT / "SKILL.md")
 agents_words = forbidden_words(ROOT / "AGENTS.md")
 word_gap = (skill_words | agents_words) - (skill_words & agents_words)
