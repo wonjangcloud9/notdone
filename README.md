@@ -74,7 +74,7 @@ Code it wrote is not evidence. Reasoning about why the code will work is not evi
 | Dependency / config | A clean install or boot, not an already-warm process |
 | Docs | Every command in the doc, run as written |
 
-The [checklists](checklists/) go further — what to actually look for in a dark-mode screenshot, why a backfill count means nothing without the before, why a green build is not a working deploy.
+The [checklists](checklists/) go further — what to actually look for in a dark-mode screenshot, why a reproduction that never failed proves nothing, why a backfill count means nothing without the before, why a green build is not a working deploy.
 
 ## Phrases it removes
 
