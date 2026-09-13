@@ -66,13 +66,13 @@ Code it wrote is not evidence. Reasoning about why the code will work is not evi
 
 | Changed | Not done until |
 |---|---|
-| UI | Light, dark, empty state, ~400px — four screenshots, each one looked at |
-| Logic / API | Real test output: command, exit code, pass/fail counts |
-| Bug fix | The reproduction failing before the change and passing after |
-| Data / migration | Applied output plus a query proving the new shape |
-| Deploy | The live URL answering from outside, with its status code |
-| Dependency / config | A clean install or boot, not an already-warm process |
-| Docs | Every command in the doc, run as written |
+| **UI** | Four screenshots: light, dark, the empty state, and ~400px width. You looked at each one. |
+| **Logic / API** | The real test output — command, exit code, and pass/fail counts. Pasted, not summarized. |
+| **Bug fix** | The reproduction, run twice: failing before your change, passing after. Both outputs shown. |
+| **Data / migration** | The applied output, plus a query proving the new shape exists. |
+| **Deploy** | The live URL answering from outside, with its status code. Not the build log. |
+| **Dependency / config** | A clean install or boot from scratch, not an already-warm process. |
+| **Docs** | Every command in the doc, executed as written. |
 
 The [checklists](checklists/) go further — what to actually look for in a dark-mode screenshot, why a reproduction that never failed proves nothing, why a backfill count means nothing without the before, why a green build is not a working deploy.
 

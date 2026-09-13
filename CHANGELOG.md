@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.4
+
+- The README carried a fourth copy of the evidence table, left on the pre-0.2.0 wording when `SKILL.md` and `AGENTS.md` were unified. It promised less than the skill delivers — no "Not the build log", no "Pasted, not summarized" — in the document people read first. Synced, and `validate.py` now holds it to the skill's table. The Korean README is a translation, so only its row count is checkable; that is checked too.
+
 ## 0.4.3
 
 - The core rule sentence forbade six words in `SKILL.md` and five in `AGENTS.md` — "complete" was missing from the copy other agents read. Restored, and `validate.py` now compares that sentence's word list too. This is the third instance of the same drift, each in a different duplicated passage.

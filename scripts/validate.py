@@ -168,6 +168,17 @@ skill_rows = evidence_table(ROOT / "SKILL.md")
 agents_rows = evidence_table(ROOT / "AGENTS.md")
 check("evidence table found in both files", bool(skill_rows) and bool(agents_rows),
       f"SKILL.md {len(skill_rows)} rows, AGENTS.md {len(agents_rows)} rows")
+readme_rows = evidence_table(ROOT / "README.md")
+check("README evidence table matches the skill", skill_rows == readme_rows,
+      "the README is the first thing anyone reads; a weaker table there is a weaker promise"
+      if skill_rows != readme_rows else f"{len(readme_rows)} rows identical")
+
+ko_rows = [r for r in (ROOT / "README.ko.md").read_text().splitlines()
+           if r.startswith("| ") and not set(r.strip()) <= set("|- ")
+           and "바뀐 것" not in r]
+check("the Korean table has the same number of rows", len(ko_rows) == len(skill_rows),
+      f"ko {len(ko_rows)} vs {len(skill_rows)}; the text is a translation, so only the count is checkable")
+
 check("evidence tables agree", skill_rows == agents_rows,
       "SKILL.md and AGENTS.md have drifted" if skill_rows != agents_rows
       else f"{len(skill_rows)} rows identical")
