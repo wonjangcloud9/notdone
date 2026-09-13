@@ -50,6 +50,10 @@ def non_spec_frontmatter(tree):
     edit(tree, "SKILL.md", "license: MIT", "license: MIT\nmodel: opus")
 
 
+def drop_banned_phrase(tree):
+    edit(tree, "AGENTS.md", ' \u00b7 "everything is in place"', "")
+
+
 def broken_link(tree):
     edit(tree, "README.md", "](checklists/)", "](checklists/nope.md)")
 
@@ -60,6 +64,7 @@ CASES = [
     ("the evidence tables drifting", drift_evidence_table, "evidence tables agree"),
     ("a version out of sync with the changelog", desync_version, "matches plugin.json"),
     ("a non-spec frontmatter field", non_spec_frontmatter, "Agent Skills spec fields"),
+    ("a banned phrase dropped from AGENTS.md", drop_banned_phrase, "banned phrase lists agree"),
     ("a link to a file that does not exist", broken_link, "nope.md"),
 ]
 

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.2
+
+- `AGENTS.md` was missing one banned phrase — "everything is in place" — so anyone using the Codex/Cursor copy was not covered by it. Restored, and `validate.py` now compares the two phrase lists the same way it compares the evidence tables. The check found this drift on its first run, as the table check did before it.
+
 ## 0.4.1
 
 - The worked example was written before 0.4.0 and modelled the behaviour that release exists to stop: the browser was already open for two screenshots, yet the example marked the 400px width NOT DONE. It now verifies everything within reach and leaves a single `NOT VERIFIED` row for the panel that needs a Stripe test credential.

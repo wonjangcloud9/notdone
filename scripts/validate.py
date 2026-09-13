@@ -40,6 +40,30 @@ def evidence_table(path):
     return rows
 
 
+def banned_phrases(path, heading):
+    """The quoted phrases under a heading, as a set.
+
+    Duplicated between SKILL.md and AGENTS.md for the same reason the evidence
+    table is: AGENTS.md has to survive being copied into a repo on its own.
+    """
+    text = path.read_text()
+    start = text.index(heading) + len(heading)
+    rest = text[start:]
+    end = rest.index("\n## ") if "\n## " in rest else len(rest)
+
+    # Only lines that are nothing but quoted phrases and separators — SKILL.md
+    # uses a bullet per phrase, AGENTS.md runs them together with "·". This
+    # skips the prose around them, which also contains quotes.
+    phrases = set()
+    for line in rest[:end].splitlines():
+        quoted = re.findall(r'"([^"]+)"', line)
+        if not quoted:
+            continue
+        if set(re.sub(r'"[^"]+"', "", line)) <= set("-· \t"):
+            phrases.update(quoted)
+    return phrases
+
+
 failures = []
 checks = 0
 
@@ -135,6 +159,13 @@ check("evidence table found in both files", bool(skill_rows) and bool(agents_row
 check("evidence tables agree", skill_rows == agents_rows,
       "SKILL.md and AGENTS.md have drifted" if skill_rows != agents_rows
       else f"{len(skill_rows)} rows identical")
+
+skill_phrases = banned_phrases(ROOT / "SKILL.md", "## Phrases that are never acceptable")
+agents_phrases = banned_phrases(ROOT / "AGENTS.md", "## Never use these phrases")
+missing = (skill_phrases | agents_phrases) - (skill_phrases & agents_phrases)
+check("banned phrase lists agree", skill_phrases and not missing,
+      f"only in one file: {', '.join(sorted(missing))}" if missing
+      else f"{len(skill_phrases)} phrases identical")
 
 print(f"\n{checks - len(failures)}/{checks} checks passed")
 if failures:

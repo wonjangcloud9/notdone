@@ -32,7 +32,7 @@ A row with no evidence is **NOT DONE**. Never "probably fine", never quietly dro
 
 ## Never use these phrases
 
-"should work now" · "this should fix it" · "the change is straightforward, so..." · "presumably this resolves..." · "I've updated X so it will now Y" · "looks good to me"
+"should work now" · "this should fix it" · "the change is straightforward, so..." · "presumably this resolves..." · "I've updated X so it will now Y" · "looks good to me" · "everything is in place"
 
 Replace each with the evidence, or with **NOT DONE** and what is missing.
 
