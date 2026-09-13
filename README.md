@@ -43,14 +43,20 @@ That is the whole install. The repository *is* the skill directory.
 
 For one project only, clone into `.claude/skills/notdone` inside the repo instead.
 
-Or install it as a plugin, which also keeps it updatable:
+Or install it as a plugin:
 
 ```bash
 claude plugin marketplace add wonjangcloud9/notdone
 claude plugin install notdone@wonjang-skills
 ```
 
-It activates on its own when the agent is about to report completion. You can also invoke it directly with `/notdone`, or ask "is this actually done?"
+To update a cloned install, pull:
+
+```bash
+git -C ~/.claude/skills/notdone pull
+```
+
+It activates on its own when the agent is about to report something finished, when a check it ran has just failed, and when it is about to cite a screenshot or test run from earlier in the session. You can also invoke it directly with `/notdone`, or ask "is this actually done?"
 
 ## The rule
 

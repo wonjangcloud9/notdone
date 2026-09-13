@@ -43,14 +43,20 @@ git clone https://github.com/wonjangcloud9/notdone ~/.claude/skills/notdone
 
 프로젝트 하나에만 적용하려면 해당 레포 안의 `.claude/skills/notdone`으로 clone 하면 됩니다.
 
-플러그인으로 설치할 수도 있습니다. 이쪽은 업데이트가 편합니다:
+플러그인으로 설치할 수도 있습니다:
 
 ```bash
 claude plugin marketplace add wonjangcloud9/notdone
 claude plugin install notdone@wonjang-skills
 ```
 
-에이전트가 완료를 보고하려 할 때 알아서 발동합니다. `/notdone`으로 직접 부르거나 "이거 진짜 다 된 거야?"라고 물어도 됩니다.
+clone으로 깔았다면 갱신은 pull입니다:
+
+```bash
+git -C ~/.claude/skills/notdone pull
+```
+
+에이전트가 무언가 끝났다고 보고하려 할 때, 방금 돌린 검사가 실패했을 때, 세션 앞부분의 스크린샷이나 테스트 출력을 인용하려 할 때 알아서 발동합니다. `/notdone`으로 직접 부르거나 "이거 진짜 다 된 거야?"라고 물어도 됩니다.
 
 ## 규칙
 

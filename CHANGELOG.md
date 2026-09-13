@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.8.1
+
+- The README never said how to update a cloned install, and implied only the plugin route could be updated. It is `git -C ~/.claude/skills/notdone pull`. With eight releases in a day, anyone who cloned early was sitting on a materially weaker skill with no way to know.
+- The same section still described activation as "when the agent is about to report completion", which 0.8.0 had already outgrown. It now names the failed-check and stale-artifact triggers too.
+
 ## 0.8.0
 
 - **The skill now activates at the moments its newer rules are about to be broken.** The description had not changed since 0.1.0 and only listed "about to report completion", so the two rules that matter most — do not shape the check to fit the result, and evidence goes stale — could never fire at the moment they apply: a check that just failed, or a screenshot from earlier in the session about to be cited. Both are now trigger conditions. A rule that does not activate is not a rule.
