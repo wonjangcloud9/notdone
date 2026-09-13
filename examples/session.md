@@ -22,12 +22,16 @@ Three things are wrong with this, and none of them are visible to you:
 > |---|---|---|
 > | Dark mode renders correctly | `shots/settings-dark.png` — labels readable against the panel, divider visible, focus ring intact | DONE |
 > | Light mode unaffected | `shots/settings-light.png` — palette now defined on `:root`, border restored | DONE |
-> | Empty state | — | **NOT DONE** |
-> | Mobile width | — | **NOT DONE** |
+> | Empty state | `shots/settings-empty.png` — rendered with zero saved profiles, the list shows its placeholder rather than collapsing | DONE |
+> | Mobile width | `shots/settings-400.png` — resized to 400px, rows wrap, no horizontal scroll | DONE |
+> | Billing panel in dark mode | — | **NOT VERIFIED** |
 >
-> **NOT DONE.** I have not rendered the page with zero saved profiles, and I have not checked it at 400px. Both need the dev server running with a seeded empty account.
+> **NOT VERIFIED** — the billing panel only renders with a Stripe test customer, and I have no credentials for one here.
+> To verify: sign in as a seeded test customer and open Settings → Billing in dark mode.
 
-The second report is longer, and that is the point. It contains a bug that the first report would have shipped, and it ends with two specific things you now know are unverified — instead of a sentence that quietly assumes they are fine.
+The second report is longer, and that is the point. It contains a bug the first report would have shipped, and the one row it cannot close is named precisely, with the check you would run.
+
+Note which rows are DONE. The browser was already open for the theme screenshots, so the empty state and the 400px width cost one resize and one seeded render each — rows like that are not candidates for NOT DONE. The ledger is written after the checks, not instead of them. What is left over is the row that needs a credential nobody handed the agent.
 
 ## What it does not do
 

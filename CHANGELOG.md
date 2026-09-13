@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.1
+
+- The worked example was written before 0.4.0 and modelled the behaviour that release exists to stop: the browser was already open for two screenshots, yet the example marked the 400px width NOT DONE. It now verifies everything within reach and leaves a single `NOT VERIFIED` row for the panel that needs a Stripe test credential.
+
 ## 0.4.0
 
 - **The skill now tells the agent to go and verify, not only what it may not claim.** Every rule so far governed the report, so a lazy agent could satisfy all of them by doing nothing and writing NOT DONE on every row — and "Reporting NOT DONE is a success" encouraged exactly that. The ledger is now explicitly the last step: produce the artifacts first, and reserve NOT DONE for what you attempted and could not complete, or what needs a credential, a device, a service, or the user's decision.
