@@ -1,5 +1,11 @@
 <p align="center"><a href="README.md">English</a> | <a href="README.ko.md">한국어</a></p>
 
+<p align="center">
+  <a href="https://github.com/wonjangcloud9/notdone/actions/workflows/validate.yml"><img src="https://github.com/wonjangcloud9/notdone/actions/workflows/validate.yml/badge.svg" alt="validate"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT"></a>
+  <img src="https://img.shields.io/badge/Claude%20Code-skill-6b5bd6" alt="Claude Code skill">
+</p>
+
 # notdone
 
 **Your agent says it's done. It never looked at the screen.**
@@ -25,7 +31,7 @@ With `notdone`, the same turn ends like this:
 >
 > **NOT DONE.** I have not rendered the page with zero saved profiles, and I have not checked it at 400px.
 
-Two rows of work, honestly labeled, beat four rows of confidence.
+Two rows of work, honestly labeled, beat four rows of confidence. [A fuller before/after](examples/session.md) shows a turn where the honest version catches a bug the confident one ships.
 
 ## Install
 
@@ -36,6 +42,13 @@ git clone https://github.com/wonjangcloud9/notdone ~/.claude/skills/notdone
 That is the whole install. The repository *is* the skill directory.
 
 For one project only, clone into `.claude/skills/notdone` inside the repo instead.
+
+Or install it as a plugin, which also keeps it updatable:
+
+```bash
+claude plugin marketplace add wonjangcloud9/notdone
+claude plugin install notdone@wonjang-skills
+```
 
 It activates on its own when the agent is about to report completion. You can also invoke it directly with `/notdone`, or ask "is this actually done?"
 

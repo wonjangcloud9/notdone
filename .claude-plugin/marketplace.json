@@ -1,0 +1,14 @@
+{
+  "name": "wonjang-skills",
+  "owner": {
+    "name": "wonjangcloud9",
+    "url": "https://github.com/wonjangcloud9"
+  },
+  "plugins": [
+    {
+      "name": "notdone",
+      "source": "./",
+      "description": "Blocks completion claims that have no evidence."
+    }
+  ]
+}

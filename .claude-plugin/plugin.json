@@ -1,0 +1,14 @@
+{
+  "name": "notdone",
+  "displayName": "notdone",
+  "version": "0.1.0",
+  "description": "Blocks completion claims that have no evidence. Turns \"done\" into an evidence ledger and forces NOT DONE when proof is missing.",
+  "author": {
+    "name": "wonjangcloud9",
+    "url": "https://github.com/wonjangcloud9"
+  },
+  "homepage": "https://github.com/wonjangcloud9/notdone",
+  "repository": "https://github.com/wonjangcloud9/notdone",
+  "license": "MIT",
+  "keywords": ["verification", "definition-of-done", "evidence", "quality", "agent-behavior"]
+}

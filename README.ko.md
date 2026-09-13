@@ -1,5 +1,11 @@
 <p align="center"><a href="README.md">English</a> | <a href="README.ko.md">한국어</a></p>
 
+<p align="center">
+  <a href="https://github.com/wonjangcloud9/notdone/actions/workflows/validate.yml"><img src="https://github.com/wonjangcloud9/notdone/actions/workflows/validate.yml/badge.svg" alt="validate"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT"></a>
+  <img src="https://img.shields.io/badge/Claude%20Code-skill-6b5bd6" alt="Claude Code skill">
+</p>
+
 # notdone
 
 **에이전트가 다 됐다고 말합니다. 화면은 한 번도 안 봤고요.**
@@ -25,7 +31,7 @@ CSS를 썼을 뿐, 페이지를 열어보진 않았습니다. 글자가 읽히�
 >
 > **NOT DONE.** 저장된 프로필이 0개인 상태를 렌더링해보지 않았고, 400px에서 확인하지 않았습니다.
 
-정직하게 표시된 두 줄이, 자신 있는 네 줄보다 낫습니다.
+정직하게 표시된 두 줄이, 자신 있는 네 줄보다 낫습니다. [더 자세한 전후 비교](examples/session.md)에서는, 정직한 쪽이 자신 있는 쪽이 그냥 배포했을 버그를 잡아냅니다.
 
 ## 설치
 
@@ -36,6 +42,13 @@ git clone https://github.com/wonjangcloud9/notdone ~/.claude/skills/notdone
 이게 전부입니다. 레포 자체가 스킬 디렉터리예요.
 
 프로젝트 하나에만 적용하려면 해당 레포 안의 `.claude/skills/notdone`으로 clone 하면 됩니다.
+
+플러그인으로 설치할 수도 있습니다. 이쪽은 업데이트가 편합니다:
+
+```bash
+claude plugin marketplace add wonjangcloud9/notdone
+claude plugin install notdone@wonjang-skills
+```
 
 에이전트가 완료를 보고하려 할 때 알아서 발동합니다. `/notdone`으로 직접 부르거나 "이거 진짜 다 된 거야?"라고 물어도 됩니다.
 
